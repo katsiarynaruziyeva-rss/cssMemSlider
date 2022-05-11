@@ -1,4 +1,4 @@
-/* body {
+body {
     margin: 0;
     background-color: black;
   }
@@ -143,7 +143,7 @@
   }
 
 
-  @media (max-width: 1279px){
+  /* @media (max-width: 1279px){
       .wrapper{
           max-width: 955px;
       }

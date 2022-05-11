@@ -150,20 +150,18 @@ body {
       .slides{
           height: 40vh;
       }
-    .slide{
+    /* .slide{
         background-size: contain;
-    }  
+    }   */
   }
   @media (max-width: 767px) {
     .wrapper {
-      padding: 0 20px;
+      padding: 20px;
     }
     .slider{
         gap: 0;
     }
-    .slides{
-        height: 20vh;
-    }
+  
     .navigation_wrapper {
         flex-direction: column;
         gap: 25px;

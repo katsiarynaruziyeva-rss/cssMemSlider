@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    background-color: black;
+  }
+  
+  .wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 60px 30px 0 30px;
+  }
+  
+  .slider {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+  }
+  
+  .slides {
+    overflow: hidden;
+    width: 100%;
+    height: 60vh;
+    margin: 0 auto;
+  }
+  
+  .slides_wrapper {
+    width: 400%;
+    height: 100%;
+    transition: all .9s ease;
+    display: flex;
+  }
+  
+  .slide {
+    display: block;
+    width: 25%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .slide1 {
+    background-image: url("./image/1618124900_33-p-ugarnie-zhivotnie-zhivotnie-krasivo-foto-34.jpg");
+  }
+  
+  .slide2 {
+    background-image: url("./image/57eteciu1su.jpg");
+  }
+  
+  .slide3 {
+    background-image: url("./image/Sad-Monkey-1024x768-1-640x480.jpg");
+  }
+  
+  .slide4 {
+    background-image: url("./image/images.jpg");
+  }
+  
+  .navigation_wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
+  .slider_comments {
+    display: flex;
+    overflow: hidden;
+    width: 70%;
+  }
+  
+  
+  .comments {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    font-size: 2rem;
+    transition: all .9s ease;
+    color: white;
+  }
+ 
+  
+  .navigation {
+    display: flex;
+    justify-content: flex-end;
+    order: 2;
+    width: 30%;
+  }
+  
+ 
+  input {
+    display: none;
+  }
+  
+  .navigation_button {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .navigation_button:hover .navigation_switch {
+    background-color: transparent;
+  }
+  
+  #r1:checked ~ .navigation_wrapper .navigation .navigation_button .switch1,
+  #r2:checked ~ .navigation_wrapper .navigation .navigation_button .switch2,
+  #r3:checked ~ .navigation_wrapper .navigation .navigation_button .switch3,
+  #r4:checked ~ .navigation_wrapper .navigation .navigation_button .switch4 {
+    background-color: black;
+    border: 1px solid white;
+  }
+  
+  .navigation_switch {
+    display: block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid blue;
+    border-radius: 50%;
+    background-color: blue;
+    transition: 0.5s;
+  }
+  
+  #r2:checked ~ .slides .slides_wrapper {
+    margin-left: -100%;
+  }
+  
+  #r3:checked ~ .slides .slides_wrapper {
+    margin-left: -200%;
+  }
+  
+  #r4:checked ~ .slides .slides_wrapper {
+    margin-left: -300%;
+  }
+ 
+  
+  #r2:checked ~ .navigation_wrapper .slider_comments .comment1 {
+    margin-left: -100%;
+  }
+  
+  #r3:checked ~ .navigation_wrapper .slider_comments .comment1 {
+    margin-left: -200%;
+  }
+  
+  #r4:checked ~ .navigation_wrapper .slider_comments .comment1 {
+    margin-left: -300%;
+  }
+
+
+  @media (max-width: 1279px){
+      .wrapper{
+          max-width: 955px;
+      }
+      .slides{
+          height: 40vh;
+      }
+    /* .slide{
+        background-size: contain;
+    }   */
+  }
+  @media (max-width: 767px) {
+    .wrapper {
+      padding: 20px;
+    }
+    .slider{
+        gap: 0;
+    }
+  
+    .navigation_wrapper {
+        flex-direction: column;
+        gap: 25px;
+        padding-top: 15px;
+      }
+    .slider_comments {
+        width: 100%;
+      }
+    .comments {
+        font-size: 1.25rem;
+      }
+    .navigation {
+        justify-content: center;
+        order: unset;
+        width: 100%;
+      }
+      .navigation_switch{
+          width: 15px;
+          height: 15px;
+      }
+  
+  }
